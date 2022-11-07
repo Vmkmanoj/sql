@@ -20,7 +20,7 @@ def insert(name,age,city):
 
 def delete(id):
     res = con.cursor()
-    sql = "delete from users where id=%s"
+    sql = "delete from STUDENTNAMES where id=%s"
     user = (id,)
     res.execute(sql, user)
     con.commit()
@@ -28,7 +28,7 @@ def delete(id):
 
 def update(name,age,city,id):
     res = con.cursor()
-    sql = "update users set name=%s,age=%s,city=%s where id=%s"
+    sql = "update STUDENTNAMES set name=%s,age=%s,city=%s where id=%s"
     user = (name, age, city,id)
     res.execute(sql, user)
     con.commit()
