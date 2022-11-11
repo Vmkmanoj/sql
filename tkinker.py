@@ -39,13 +39,12 @@ def entery():
     con.commit()
     con.close()
     Label(text="sucessfully......",font="arial 20",fg="green").place(x=220,y=430)
-
-    
 def show():
    cur=con.cursor()
    cur.execute("SELECT NAME,AGE,CITY,PHONENUMBER,GENDER,PHONE FROM STUDENT") 
    mano=cur.fetchall()
-   Label(text=mano).place(x=300,y=430)
+   A=tabulate(mano,headers=["NAME","AGE","CITY","PHONE","GENDER","FEE"])
+   Label(text=A).pack()
 
 
 
