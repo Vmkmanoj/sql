@@ -1,4 +1,5 @@
 import sqlite3
+from tabulate import tabulate
 
 
 
@@ -39,7 +40,7 @@ def show():
     cur=con.cursor()
     cur.execute("SELECT NAME,AGE,CITY from STUDENTNAMES")
     result=cur.fetchall()
-    print(result)
+    print(tabulate(result,header="name age city"))
 
 while True:
     print("1.inset")
