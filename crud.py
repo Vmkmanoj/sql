@@ -27,10 +27,9 @@ def delete(id):
     print("Data Delete Success")
 
 def update(name,age,city,id):
-    res = con.cursor()
-    sql = "update STUDENTNAMES set name=%s,age=%s,city=%s where id=%s"
-    user = (name, age, city,id)
-    res.execute(sql, user)
+    cur = con.cursor()
+    cur.execute=(f"delete manoj set name='{name}',age='{age}',city='{city}' where name='{id}'")
+
     con.commit()
     print("Data Update Success")
 
