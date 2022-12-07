@@ -20,10 +20,9 @@ def insert(name,age,city):
 
 
 def delete(id):
-    res = con.cursor()
-    sql = "delete from STUDENTNAMES where id=%s"
-    user = (id,)
-    res.execute(sql, user)
+    cur = con.cursor()
+    cur.execute("delete from mano where name id='{}'".format(id))
+    
     con.commit()
     print("Data Delete Success")
 
